@@ -1,0 +1,52 @@
+[
+  {
+    "username": "admin",
+    "password": "password123",
+    "email": "admin@email.com"
+  },
+  {
+    "username": "john_doe",
+    "password": "password123",
+    "email": "john_doe@email.com"
+  },
+  {
+    "username": "jane_smith",
+    "password": "password123",
+    "email": "jane_smith@email.com"
+  },
+  {
+    "username": "alex_dev",
+    "password": "password123",
+    "email": "alex_dev@email.com"
+  },
+  {
+    "username": "sarah_gamer",
+    "password": "password123",
+    "email": "sarah_gamer@email.com"
+  },
+  {
+    "username": "mike_tech",
+    "password": "password123",
+    "email": "mike_tech@email.com"
+  },
+  {
+    "username": "lisa_designer",
+    "password": "password123",
+    "email": "lisa_designer@email.com"
+  },
+  {
+    "username": "tom_writer",
+    "password": "password123",
+    "email": "tom_writer@email.com"
+  },
+  {
+    "username": "anna_scientist",
+    "password": "password123",
+    "email": "anna_scientist@email.com"
+  },
+  {
+    "username": "david_manager",
+    "password": "password123",
+    "email": "david_manager@email.com"
+  }
+]

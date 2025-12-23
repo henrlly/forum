@@ -1,0 +1,11 @@
+forum.henrlly.com, forum1.henrlly.com {
+    handle /api/* {
+        reverse_proxy backend:8000
+    }
+
+    handle {
+        root * /srv
+        file_server
+        try_files {path} /index.html
+    }
+}

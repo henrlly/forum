@@ -1,0 +1,10 @@
+-- Drop all tables and extensions in correct order (respecting foreign key constraints)
+DROP TABLE IF EXISTS comment_votes CASCADE;
+DROP TABLE IF EXISTS post_votes CASCADE;
+DROP TABLE IF EXISTS comments CASCADE;
+DROP TABLE IF EXISTS posts CASCADE;
+DROP TABLE IF EXISTS user_topics CASCADE;
+DROP TABLE IF EXISTS topics CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+DROP EXTENSION IF EXISTS ltree CASCADE;
+DROP EXTENSION IF EXISTS pg_trgm CASCADE;

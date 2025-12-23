@@ -1,0 +1,32 @@
+name: Deploy App
+run-name: Deploy - ${{ github.event.head_commit.message }}
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.docx'
+      - '**/*.pdf'
+      - '.github/workflows/deploy.yml'
+      - '.gitignore'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd forum
+            git pull origin main
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml down -v --rmi local
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d

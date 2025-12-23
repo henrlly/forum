@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Technology",
+    "description": "Latest gadgets, tech news, and innovation"
+  },
+  {
+    "name": "Science",
+    "description": "Scientific discoveries, research, and experiments"
+  },
+  {
+    "name": "Gaming",
+    "description": "Video games, reviews, and gaming culture"
+  },
+  {
+    "name": "Music",
+    "description": "Artists, albums, concerts, and music discovery"
+  },
+  {
+    "name": "Sports",
+    "description": "Athletic competitions, teams, and sports news"
+  },
+  {
+    "name": "Programming",
+    "description": "Coding, software development, and programming languages"
+  },
+  {
+    "name": "Movies",
+    "description": "Films, reviews, and cinema discussions"
+  },
+  {
+    "name": "Books",
+    "description": "Literature, book reviews, and reading recommendations"
+  },
+  {
+    "name": "Food",
+    "description": "Cooking recipes, restaurant reviews, and culinary adventures"
+  },
+  {
+    "name": "Travel",
+    "description": "Travel destinations, tips, and cultural experiences"
+  },
+  {
+    "name": "Photography",
+    "description": "Photo techniques, equipment reviews, and visual storytelling"
+  },
+  {
+    "name": "Art",
+    "description": "Visual arts, digital art, and creative expression"
+  },
+  {
+    "name": "Health",
+    "description": "Fitness, nutrition, mental health, and wellness tips"
+  },
+  {
+    "name": "Business",
+    "description": "Entrepreneurship, startups, and business strategies"
+  },
+  {
+    "name": "Education",
+    "description": "Learning resources, online courses, and educational discussions"
+  },
+  {
+    "name": "Environment",
+    "description": "Sustainability, climate change, and environmental conservation"
+  }
+]

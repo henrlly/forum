@@ -1,0 +1,11 @@
+# Sensitive variables
+.env
+.env.local
+.env.*.local
+
+# Editor
+.idea/*
+.vscode/*
+
+# Air
+/tmp

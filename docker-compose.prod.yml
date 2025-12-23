@@ -1,0 +1,52 @@
+services:
+  postgres:
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    container_name: backend-prod
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+    command: ["./server", "--seed"]
+    depends_on:
+      - postgres
+
+  frontend:
+    build: ./frontend
+    container_name: frontend-prod
+    restart: unless-stopped
+    environment:
+      VITE_API_URL: /api
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./frontend/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data # Persist this so we don't request a new SSL cert on every deploy
+      - ./caddy_config:/config
+    depends_on:
+      - backend
+
+  backup:
+    build: ./backup
+    container_name: backup-prod
+    restart: unless-stopped
+    environment:
+      PGHOST: postgres
+      PGUSER: ${POSTGRES_USER}
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: ${POSTGRES_DB}
+      PGPORT: ${POSTGRES_PORT}
+      BACKUP_DIR: /backups
+      CRON_SCHEDULE: "0 2 * * *" # Daily at 2 AM
+      BACKUP_RETENTION_DAYS: 7
+    volumes:
+      - ./backups:/backups
+    depends_on:
+      - postgres
