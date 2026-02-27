@@ -11,6 +11,9 @@
 # PDF files
 **/*.pdf
 
+# Word documents
+**/*.docx
+
 # Database backups
 /backups
 
