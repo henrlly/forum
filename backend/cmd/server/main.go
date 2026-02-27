@@ -4,6 +4,7 @@ import (
 	"cvwo/internal/database"
 	"cvwo/internal/routes"
 	seedUtil "cvwo/cmd/db/seed"
+	"cvwo/cmd/db/operations"
 	"flag"
 	"log"
 	"net/http"
@@ -27,6 +28,7 @@ func main() {
 	database.Connect()
 
 	if *seed {
+		operations.ResetDatabase()
 		seedUtil.SeedDatabase()
 	}
 
