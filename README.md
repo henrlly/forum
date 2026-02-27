@@ -4,6 +4,8 @@ A simple web forum built with Go (1.24), React (19), and PostgreSQL (16). \
 Frontend uses [Vite](https://github.com/vitejs/vite), [MUI](https://github.com/mui/material-ui), [Zod](https://github.com/colinhacks/zod), [React Hook Form](https://github.com/react-hook-form/react-hook-form), [Tanstack Query](https://github.com/TanStack/query), and [Tanstack Router](https://github.com/TanStack/router). \
 Backend uses [chi](https://github.com/go-chi/chi), [golang-jwt](https://github.com/golang-jwt/jwt), and [gorilla/schema](https://github.com/gorilla/schema).
 
+See also the user manual ([`MANUAL.md`](MANUAL.md)) for detailed feature descriptions and the execution plan ([`PLAN.md`](PLAN.md)) for the original project plan and architecture decisions.
+
 The email and passwords of seeded users can be found in `backend/embed/seed_data/users.json`. \
 All their passwords are `password123` and the emails are in the format `{username}@email.com`. \
 E.g. For username `admin`, the email is `admin@email.com`.
